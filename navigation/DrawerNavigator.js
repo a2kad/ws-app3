@@ -1,12 +1,27 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { createDrawerNavigator } from '@react-navigation/drawer';
 import AsyncStorage from '@react-native-async-storage/async-storage';
-import { View, Text, Button } from 'react-native';
+import { View, Text, Button, Platform, StyleSheet, Linking, AppState } from 'react-native';
+import MapView, { Marker } from 'react-native-maps';
 import { useFocusEffect } from '@react-navigation/native';
 import HomeScreen from '../screens/HomeScreen';
 import OnboardingScreen from '../screens/OnboardingScreen';
 import HighScoreScreen from '../screens/HighScoreScreen';
 import LowScoreScreen from '../screens/LowScoreScreen';
+import { Ionicons } from '@expo/vector-icons';
+import ContactsScreen from '../screens/ContactsScreen';
+
+const BoutiqueScreen = () => (
+  <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
+    <Text style={{ fontSize: 24 }}>Бутик</Text>
+  </View>
+);
+
+const EducationScreen = () => (
+  <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
+    <Text style={{ fontSize: 24 }}>Обучение</Text>
+  </View>
+);
 
 const Drawer = createDrawerNavigator();
 
@@ -57,9 +72,64 @@ export default function DrawerNavigator() {
   //const [step, setStep] = useState('start');
 
   return (
-    <Drawer.Navigator>
-      <Drawer.Screen name="Главная" component={HomeScreen} />
-      <Drawer.Screen name="Сброс данных" component={ResetWrapper} />
+    <Drawer.Navigator
+      screenOptions={{
+        drawerActiveTintColor: '#374151',
+        drawerInactiveTintColor: '#374151',
+        drawerActiveBackgroundColor: '#FACC15',
+        drawerInactiveBackgroundColor: 'transparent',
+        drawerItemStyle: {
+          borderRadius: 8, // уменьшение скругления активного пункта
+          marginVertical: 4,
+        },
+      }}
+    >
+      <Drawer.Screen
+        name="Главная"
+        component={HomeScreen}
+        options={{
+          drawerIcon: ({ color, size }) => (
+            <Ionicons name="home-outline" size={size} color={color} />
+          ),
+        }}
+      />
+      
+      <Drawer.Screen
+        name="Бутик"
+        component={BoutiqueScreen}
+        options={{
+          drawerIcon: ({ color, size }) => (
+            <Ionicons name="pricetag-outline" size={size} color={color} />
+          ),
+        }}
+      />
+      <Drawer.Screen
+        name="Обучение"
+        component={EducationScreen}
+        options={{
+          drawerIcon: ({ color, size }) => (
+            <Ionicons name="book-outline" size={size} color={color} />
+          ),
+        }}
+      />
+      <Drawer.Screen
+        name="Сброс данных"
+        component={ResetWrapper}
+        options={{
+          drawerIcon: ({ color, size }) => (
+            <Ionicons name="refresh-outline" size={size} color={color} />
+          ),
+        }}
+      />
+      <Drawer.Screen
+        name="Контакты"
+        component={ContactsScreen}
+        options={{
+          drawerIcon: ({ color, size }) => (
+            <Ionicons name="call-outline" size={size} color={color} />
+          ),
+        }}
+      />
     </Drawer.Navigator>
   );
 }

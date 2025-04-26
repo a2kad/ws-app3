@@ -54,7 +54,7 @@ export default function OnboardingScreen({ onFinish }) {
 
 const styles = StyleSheet.create({
   container: { flex: 1, padding: 24, justifyContent: 'center' },
-  question: { fontSize: 20, marginBottom: 32, textAlign: 'center' },
+  question: { fontSize: 20, marginBottom: 32, textAlign: 'center', color: '#374151' },
   buttonContainer: { flexDirection: 'row', justifyContent: 'space-around', marginBottom: 24 },
   button: {
     padding: 16,
@@ -64,5 +64,5 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
   buttonText: { color: '#374151', fontSize: 16 },
-  progress: { textAlign: 'center', color: '#888' },
+  progress: { textAlign: 'center', color: '#374151' },
 });
