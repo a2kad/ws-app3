@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { createDrawerNavigator } from '@react-navigation/drawer';
 import AsyncStorage from '@react-native-async-storage/async-storage';
-import { View, Text, Button, Platform, StyleSheet, Linking, AppState } from 'react-native';
+import { View, Text, Button, Platform, StyleSheet, Linking, AppState, Image, ScrollView, TouchableOpacity } from 'react-native';
 import MapView, { Marker } from 'react-native-maps';
 import { useFocusEffect } from '@react-navigation/native';
 import HomeScreen from '../screens/HomeScreen';
@@ -11,15 +11,95 @@ import LowScoreScreen from '../screens/LowScoreScreen';
 import { Ionicons } from '@expo/vector-icons';
 import ContactsScreen from '../screens/ContactsScreen';
 
+const openLinkProducts = () => {
+  Linking.openURL('https://www.asso-websolidarite.org/boutique_solidaire.html');
+};
+
+const openLinkEducations = () => {
+  Linking.openURL('https://www.asso-websolidarite.org/qui_sommes_nous.html');
+};
+
 const BoutiqueScreen = () => (
-  <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
-    <Text style={{ fontSize: 24 }}>Бутик</Text>
+  <View style={{ flex: 1 }}>
+    <Image
+      source={require('../assets/image/produits-bg.jpg')}
+      style={{ width: '100%', height: '45%' }}
+      resizeMode="cover"
+    />
+    <View style={{ flex: 1, padding: 16 }}>
+      <Text style={{ fontSize: 24, fontWeight: 'bold', marginBottom: 16 }}>Products</Text>
+      <Text style={{ fontSize: 16, color: '#555', marginBottom: 16, textAlign: 'left' }}>
+        Récuperation, reconditionnement & vente d'ordinateurs à prix solidaires
+      </Text>
+      <ScrollView horizontal showsHorizontalScrollIndicator={false}>
+        <TouchableOpacity style={{ alignItems: 'center', marginRight: 32 }} onPress={openLinkProducts}>
+          <Image
+            source={require('../assets/image/products/computer.png')}
+            style={{ width: 250, height: 250 }}
+            resizeMode="contain"
+          />
+          <Text style={{ marginTop: 8, fontSize: 20 }}>Computer</Text>
+        </TouchableOpacity>
+        <TouchableOpacity style={{ alignItems: 'center', marginRight: 32 }} onPress={openLinkProducts}>
+          <Image
+            source={require('../assets/image/products/desktop.png')}
+            style={{ width: 250, height: 250 }}
+            resizeMode="contain"
+          />
+          <Text style={{ marginTop: 8, fontSize: 20 }}>Desktop</Text>
+        </TouchableOpacity>
+        <TouchableOpacity style={{ alignItems: 'center' }} onPress={openLinkProducts}>
+          <Image
+            source={require('../assets/image/products/gaming.png')}
+            style={{ width: 250, height: 250 }}
+            resizeMode="contain"
+          />
+          <Text style={{ marginTop: 8, fontSize: 20 }}>Gaming</Text>
+        </TouchableOpacity>
+      </ScrollView>
+    </View>
   </View>
 );
 
 const EducationScreen = () => (
-  <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
-    <Text style={{ fontSize: 24 }}>Обучение</Text>
+  <View style={{ flex: 1 }}>
+    <Image
+      source={require('../assets/image/formation-bg.jpg')}
+      style={{ width: '100%', height: '45%' }}
+      resizeMode="cover"
+    />
+    <View style={{ flex: 1, padding: 16 }}>
+      <Text style={{ fontSize: 24, fontWeight: 'bold', marginBottom: 16 }}>Nos Ateliers Numériques</Text>
+      <Text style={{ fontSize: 16, color: '#555', marginBottom: 16, textAlign: 'left' }}>
+        Récuperation, reconditionnement & vente d'ordinateurs à prix solidaires
+      </Text>
+      <ScrollView horizontal showsHorizontalScrollIndicator={false}>
+        <TouchableOpacity style={{ alignItems: 'center', marginRight: 32 }} onPress={openLinkEducations}>
+          <Image
+            source={require('../assets/image/formation/blogger.png')}
+            style={{ width: 250, height: 250 }}
+            resizeMode="contain"
+          />
+          <Text style={{ marginTop: 8, fontSize: 20 }}>Computer</Text>
+        </TouchableOpacity>
+        <TouchableOpacity style={{ alignItems: 'center', marginRight: 32 }} onPress={openLinkEducations}>
+          <Image
+            source={require('../assets/image/formation/erp.png')}
+            style={{ width: 250, height: 250 }}
+            resizeMode="contain"
+          />
+          <Text style={{ marginTop: 8, fontSize: 20 }}>Desktop</Text>
+        </TouchableOpacity>
+        <TouchableOpacity style={{ alignItems: 'center' }} onPress={openLinkEducations}>
+          <Image
+            source={require('../assets/image/formation/internet-security.png')}
+            style={{ width: 250, height: 250 }}
+            resizeMode="contain"
+          />
+          <Text style={{ marginTop: 8, fontSize: 20 }}>Gaming</Text>
+        </TouchableOpacity>
+      </ScrollView>
+    </View>
   </View>
 );
 
