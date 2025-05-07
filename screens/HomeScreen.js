@@ -14,7 +14,7 @@ export default function HomeScreen() {
   return (
     <View style={styles.container}>
       
-      <Text style={styles.header}>Products</Text>
+      <Text style={styles.header}>Nos produits</Text>
       <ScrollView horizontal showsHorizontalScrollIndicator={false} contentContainerStyle={styles.scrollViewContainer}>
         <TouchableOpacity style={styles.item} onPress={openLinkProducts}>
           <Image
@@ -42,7 +42,7 @@ export default function HomeScreen() {
         </TouchableOpacity>
       </ScrollView>
       
-      <Text style={styles.header}>Nos Ateliers Numériques</Text>
+      <Text style={styles.header}>Nos formations</Text>
       <ScrollView horizontal showsHorizontalScrollIndicator={false} contentContainerStyle={styles.scrollViewContainer}>
         <TouchableOpacity style={styles.item} onPress={openLinkEducations}>
           <Image

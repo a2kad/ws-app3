@@ -5,9 +5,9 @@ export default function LowScoreScreen({ onContinue }) {
   return (
     <View style={styles.container}>
       <Text style={styles.text}>
-        Спасибо за ответы! Мы рекомендуем сначала изучить больше информации.
+      Il serait préférable de vous inscrire à nos ateliers numériques.
       </Text>
-      <Button title="Перейти к приложению" onPress={onContinue} />
+      <Button title="Continuer" onPress={onContinue} />
     </View>
   );
 }

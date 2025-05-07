@@ -62,26 +62,26 @@ const ContactsScreen = () => {
       >
         <Marker
           coordinate={coordinate}
-          title="Наш адрес"
+          title="Nos Contacts"
           description="48-50 Rue Albert Samain, 76620, Le Havre, France"
           onPress={openInMaps}
         />
       </MapView>
 
       <View style={styles.addressContainer}>
-        <Text style={styles.title}>Наш адрес:</Text>
+        <Text style={styles.title}>Locaux (Atelier et RDV) :</Text>
         <Text style={styles.address}>
           48-50 Rue Albert Samain, 76620, Le Havre
         </Text>
-        <Text style={styles.contactTitle}>Контактная информация:</Text>
+        <Text style={styles.contactTitle}>Nos Contacts:</Text>
         <View style={styles.contactRow}>
-          <Text style={styles.contactLabel}>Сайт: </Text>
+          <Text style={styles.contactLabel}>Site web : </Text>
           <Text style={styles.contactLink} onPress={() => openWebsite()}>
             www.asso-websolidarite.org
           </Text>
         </View>
         <View style={styles.contactRow}>
-          <Text style={styles.contactLabel}>Телефон: </Text>
+          <Text style={styles.contactLabel}>Commerces Samain-TEL: </Text>
           <Text style={styles.contactLink} onPress={() => callPhone()}>
             09 54 14 90 48
           </Text>

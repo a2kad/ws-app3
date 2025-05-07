@@ -2,18 +2,16 @@ import React, { useState } from 'react';
 import { View, Text, TouchableOpacity, StyleSheet } from 'react-native';
 
 const questions = [
-  'Вы пользуетесь мобильными приложениями ежедневно?',
-  'Вы работаете в сфере услуг?',
-  'Вы заинтересованы в цифровых решениях?',
-  'У вас есть опыт с мобильными технологиями?',
-  'Вы готовы использовать новое приложение?',
-  'Вы хотите упростить свою работу?',
-  'Вам важно экономить время?',
-  'Вы работаете с клиентами напрямую?',
-  'Вы заинтересованы в автоматизации?',
-  'Вы пользуетесь мессенджерами для работы?',
-  'Вы готовы попробовать новое решение?',
-  'Вы хотите улучшить свои рабочие процессы?',
+  'Avez-vous de l\'expérience dans la création et l\'organisation de dossiers ainsi que de sous-dossiers sur un ordinateur ?',
+  'Savez-vous comment compresser et décompresser des fichiers sur votre ordinateur ?',
+  'Êtes-vous capable de transférer des photos depuis votre téléphone vers votre ordinateur ?',
+  'Êtes-vous en mesure de réaliser les mises à jour sur votre ordinateur et votre téléphone portable ?',
+  'Êtes vous familier avec les bonnes pratiques pour éviter les arnaques et se protéger des virus et autres infections sur internet ?',
+  'Connaissez-vous la procédure pour effacer l\'historique de votre navigation sur internet ?',
+  'Êtes-vous à l\'aise pour gérer votre espace personnel sur des sites institutionnels tels que Impôts, CAF, Mairie, Ameli.fr, Pôle-Emploi, ANTS ?',
+  'Avez-vous des connaissances concernant les logiciels et systèmes d\'exploitation open source et autres ?',
+  'Maitrisez-vous les fonctionalités sur l\'application Ameli.fr?',
+  'Seriez-vous en mesure d\'identifier la taille d\'un fichier (photo, PDF, audio, vidéo) ?',
 ];
 
 export default function OnboardingScreen({ onFinish }) {
@@ -30,7 +28,7 @@ export default function OnboardingScreen({ onFinish }) {
       setIndex(next);
     } else {
       console.log('Итоговый балл:', finalScore);
-      onFinish(finalScore >= 6); // переход после последнего вопроса
+      onFinish(finalScore >= 6); 
     }
   };
 
@@ -39,14 +37,14 @@ export default function OnboardingScreen({ onFinish }) {
       <Text style={styles.question}>{questions[index]}</Text>
       <View style={styles.buttonContainer}>
         <TouchableOpacity style={styles.button} onPress={() => handleAnswer(true)}>
-          <Text style={styles.buttonText}>Да</Text>
+          <Text style={styles.buttonText}>Oui</Text>
         </TouchableOpacity>
         <TouchableOpacity style={styles.button} onPress={() => handleAnswer(false)}>
-          <Text style={styles.buttonText}>Нет</Text>
+          <Text style={styles.buttonText}>Non</Text>
         </TouchableOpacity>
       </View>
       <Text style={styles.progress}>
-        Вопрос {index + 1} из {questions.length}
+      Question {index + 1} / {questions.length}
       </Text>
     </View>
   );

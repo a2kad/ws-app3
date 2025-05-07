@@ -120,10 +120,10 @@ const ResetWrapper = ({ navigation }) => {
     return (
       <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center', padding: 24 }}>
         <Text style={{ fontSize: 18, marginBottom: 24, textAlign: 'center' }}>
-          Сбросить прогресс и начать заново?
+          Réinitialiser les progrès et recommencer ?
         </Text>
         <Button
-          title="Сбросить и начать"
+          title="Réinitialiser"
           onPress={async () => {
             await AsyncStorage.removeItem('alreadyLaunched');
             setStep('onboarding');
@@ -138,11 +138,11 @@ const ResetWrapper = ({ navigation }) => {
   }
 
   if (step === 'high') {
-    return <HighScoreScreen onContinue={() => navigation.navigate('Главная')} />;
+    return <HighScoreScreen onContinue={() => navigation.navigate('Accueil')} />;
   }
 
   if (step === 'low') {
-    return <LowScoreScreen onContinue={() => navigation.navigate('Главная')} />;
+    return <LowScoreScreen onContinue={() => navigation.navigate('Accueil')} />;
   }
 
   return null;
@@ -159,13 +159,13 @@ export default function DrawerNavigator() {
         drawerActiveBackgroundColor: '#FACC15',
         drawerInactiveBackgroundColor: 'transparent',
         drawerItemStyle: {
-          borderRadius: 8, // уменьшение скругления активного пункта
+          borderRadius: 8, 
           marginVertical: 4,
         },
       }}
     >
       <Drawer.Screen
-        name="Главная"
+        name="Accueil"
         component={HomeScreen}
         options={{
           drawerIcon: ({ color, size }) => (
@@ -175,7 +175,7 @@ export default function DrawerNavigator() {
       />
       
       <Drawer.Screen
-        name="Бутик"
+        name="Boutique Solidaire"
         component={BoutiqueScreen}
         options={{
           drawerIcon: ({ color, size }) => (
@@ -184,7 +184,7 @@ export default function DrawerNavigator() {
         }}
       />
       <Drawer.Screen
-        name="Обучение"
+        name="Formations"
         component={EducationScreen}
         options={{
           drawerIcon: ({ color, size }) => (
@@ -193,7 +193,7 @@ export default function DrawerNavigator() {
         }}
       />
       <Drawer.Screen
-        name="Сброс данных"
+        name="Questionnaire"
         component={ResetWrapper}
         options={{
           drawerIcon: ({ color, size }) => (
@@ -202,7 +202,7 @@ export default function DrawerNavigator() {
         }}
       />
       <Drawer.Screen
-        name="Контакты"
+        name="Contacts"
         component={ContactsScreen}
         options={{
           drawerIcon: ({ color, size }) => (
