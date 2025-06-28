@@ -32,29 +32,54 @@ const BoutiqueScreen = () => (
         Récuperation, reconditionnement & vente d'ordinateurs à prix solidaires
       </Text>
       <ScrollView horizontal showsHorizontalScrollIndicator={false}>
-        <TouchableOpacity style={{ alignItems: 'center', marginRight: 32 }} onPress={openLinkProducts}>
+        <TouchableOpacity style={styles.item} onPress={openLinkProducts}>
           <Image
             source={require('../assets/image/products/computer.png')}
-            style={{ width: 250, height: 250 }}
+            style={styles.image}
             resizeMode="contain"
           />
-          <Text style={{ marginTop: 8, fontSize: 20 }}>Computer</Text>
+          <Text style={styles.itemText}>Ordinateurs Reconditionnés</Text>
         </TouchableOpacity>
-        <TouchableOpacity style={{ alignItems: 'center', marginRight: 32 }} onPress={openLinkProducts}>
+
+        <TouchableOpacity style={styles.item} onPress={openLinkProducts}>
           <Image
-            source={require('../assets/image/products/desktop.png')}
-            style={{ width: 250, height: 250 }}
+            source={require('../assets/image/products/laptop.png')}
+            style={styles.image}
             resizeMode="contain"
           />
-          <Text style={{ marginTop: 8, fontSize: 20 }}>Desktop</Text>
+          <Text style={styles.itemText}>Ordinateurs Portables Reconditionnés</Text>
         </TouchableOpacity>
-        <TouchableOpacity style={{ alignItems: 'center' }} onPress={openLinkProducts}>
+        <TouchableOpacity style={styles.item} onPress={openLinkProducts}>
           <Image
-            source={require('../assets/image/products/gaming.png')}
-            style={{ width: 250, height: 250 }}
+            source={require('../assets/image/products/smartphone.png')}
+            style={styles.image}
             resizeMode="contain"
           />
-          <Text style={{ marginTop: 8, fontSize: 20 }}>Gaming</Text>
+          <Text style={styles.itemText}>Smartphone Reconditionnés</Text>
+        </TouchableOpacity>
+        <TouchableOpacity style={styles.item} onPress={openLinkProducts}>
+          <Image
+            source={require('../assets/image/products/touch-screen.png')}
+            style={styles.image}
+            resizeMode="contain"
+          />
+          <Text style={styles.itemText}>Écrans</Text>
+        </TouchableOpacity>
+        <TouchableOpacity style={styles.item} onPress={openLinkProducts}>
+          <Image
+            source={require('../assets/image/products/mouse.png')}
+            style={styles.image}
+            resizeMode="contain"
+          />
+          <Text style={styles.itemText}>Equipement Informatique & Multimédia</Text>
+        </TouchableOpacity>
+        <TouchableOpacity style={styles.item} onPress={openLinkProducts}>
+          <Image
+            source={require('../assets/image/products/repaired.png')}
+            style={styles.image}
+            resizeMode="contain"
+          />
+          <Text style={styles.itemText}>Réparation</Text>
         </TouchableOpacity>
       </ScrollView>
     </View>
@@ -70,33 +95,65 @@ const EducationScreen = () => (
     />
     <View style={{ flex: 1, padding: 16 }}>
       <Text style={{ fontSize: 24, fontWeight: 'bold', marginBottom: 16 }}>Nos Ateliers Numériques</Text>
-      <Text style={{ fontSize: 16, color: '#555', marginBottom: 16, textAlign: 'left' }}>
+      {/* <Text style={{ fontSize: 16, color: '#555', marginBottom: 16, textAlign: 'left' }}>
         Récuperation, reconditionnement & vente d'ordinateurs à prix solidaires
-      </Text>
+      </Text> */}
       <ScrollView horizontal showsHorizontalScrollIndicator={false}>
-        <TouchableOpacity style={{ alignItems: 'center', marginRight: 32 }} onPress={openLinkEducations}>
+        <TouchableOpacity style={styles.item} onPress={openLinkEducations}>
           <Image
-            source={require('../assets/image/formation/blogger.png')}
-            style={{ width: 250, height: 250 }}
+            source={require('../assets/image/formation/windows.png')}
+            style={styles.image}
             resizeMode="contain"
           />
-          <Text style={{ marginTop: 8, fontSize: 20 }}>Computer</Text>
+          <Text style={styles.itemText}>Environnement Windows</Text>
         </TouchableOpacity>
-        <TouchableOpacity style={{ alignItems: 'center', marginRight: 32 }} onPress={openLinkEducations}>
+        <TouchableOpacity style={styles.item} onPress={openLinkEducations}>
           <Image
-            source={require('../assets/image/formation/erp.png')}
-            style={{ width: 250, height: 250 }}
+            source={require('../assets/image/formation/linux-ubuntu.png')}
+            style={styles.image}
             resizeMode="contain"
           />
-          <Text style={{ marginTop: 8, fontSize: 20 }}>Desktop</Text>
+          <Text style={styles.itemText}>Environnement Ubuntu</Text>
         </TouchableOpacity>
-        <TouchableOpacity style={{ alignItems: 'center' }} onPress={openLinkEducations}>
+        <TouchableOpacity style={styles.item} onPress={openLinkEducations}>
           <Image
-            source={require('../assets/image/formation/internet-security.png')}
-            style={{ width: 250, height: 250 }}
+            source={require('../assets/image/formation/paper-plane.png')}
+            style={styles.image}
             resizeMode="contain"
           />
-          <Text style={{ marginTop: 8, fontSize: 20 }}>Gaming</Text>
+          <Text style={styles.itemText}>Messagerie</Text>
+        </TouchableOpacity>
+        <TouchableOpacity style={styles.item} onPress={openLinkEducations}>
+          <Image
+            source={require('../assets/image/formation/padlock.png')}
+            style={styles.image}
+            resizeMode="contain"
+          />
+          <Text style={styles.itemText}>Internet & Sécurité Informatique</Text>
+        </TouchableOpacity>
+        <TouchableOpacity style={styles.item} onPress={openLinkEducations}>
+          <Image
+            source={require('../assets/image/formation/programming.png')}
+            style={styles.image}
+            resizeMode="contain"
+          />
+          <Text style={styles.itemText}>Logiciels & Applications</Text>
+        </TouchableOpacity>
+        <TouchableOpacity style={styles.item} onPress={openLinkEducations}>
+          <Image
+            source={require('../assets/image/formation/settings.png')}
+            style={styles.image}
+            resizeMode="contain"
+          />
+          <Text style={styles.itemText}>E-Administration</Text>
+        </TouchableOpacity>
+        <TouchableOpacity style={styles.item} onPress={openLinkEducations}>
+          <Image
+            source={require('../assets/image/formation/medical-team.png')}
+            style={styles.image}
+            resizeMode="contain"
+          />
+          <Text style={styles.itemText}>E-Sante</Text>
         </TouchableOpacity>
       </ScrollView>
     </View>
@@ -148,6 +205,15 @@ const ResetWrapper = ({ navigation }) => {
   return null;
 };
 
+const styles = StyleSheet.create({
+  container: { flex: 1, paddingVertical: 16, paddingHorizontal: 16, justifyContent: 'flex-start' },
+  header: { fontSize: 24, fontWeight: 'bold', marginBottom: 12, paddingHorizontal: 8 },
+  scrollViewContainer: { alignItems: 'center', paddingHorizontal: 8 },
+  item: { alignItems: 'center', marginRight: 24 },
+  image: { width: 250, height: 250 },
+  itemText: { marginTop: 8, fontSize: 20 },
+});
+
 export default function DrawerNavigator() {
   //const [step, setStep] = useState('start');
 
@@ -159,7 +225,7 @@ export default function DrawerNavigator() {
         drawerActiveBackgroundColor: '#FACC15',
         drawerInactiveBackgroundColor: 'transparent',
         drawerItemStyle: {
-          borderRadius: 8, 
+          borderRadius: 8,
           marginVertical: 4,
         },
       }}
@@ -173,7 +239,7 @@ export default function DrawerNavigator() {
           ),
         }}
       />
-      
+
       <Drawer.Screen
         name="Boutique Solidaire"
         component={BoutiqueScreen}

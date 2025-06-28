@@ -16,29 +16,55 @@ export default function HomeScreen() {
       
       <Text style={styles.header}>Nos produits</Text>
       <ScrollView horizontal showsHorizontalScrollIndicator={false} contentContainerStyle={styles.scrollViewContainer}>
+
         <TouchableOpacity style={styles.item} onPress={openLinkProducts}>
           <Image
             source={require('../assets/image/products/computer.png')}
             style={styles.image}
             resizeMode="contain"
           />
-          <Text style={styles.itemText}>Computer</Text>
+          <Text style={styles.itemText}>Ordinateurs Reconditionnés</Text>
         </TouchableOpacity>
+
         <TouchableOpacity style={styles.item} onPress={openLinkProducts}>
           <Image
-            source={require('../assets/image/products/desktop.png')}
+            source={require('../assets/image/products/laptop.png')}
             style={styles.image}
             resizeMode="contain"
           />
-          <Text style={styles.itemText}>Desktop</Text>
+          <Text style={styles.itemText}>Ordinateurs Portables Reconditionnés</Text>
         </TouchableOpacity>
         <TouchableOpacity style={styles.item} onPress={openLinkProducts}>
           <Image
-            source={require('../assets/image/products/gaming.png')}
+            source={require('../assets/image/products/smartphone.png')}
             style={styles.image}
             resizeMode="contain"
           />
-          <Text style={styles.itemText}>Gaming</Text>
+          <Text style={styles.itemText}>Smartphone Reconditionnés</Text>
+        </TouchableOpacity>
+        <TouchableOpacity style={styles.item} onPress={openLinkProducts}>
+          <Image
+            source={require('../assets/image/products/touch-screen.png')}
+            style={styles.image}
+            resizeMode="contain"
+          />
+          <Text style={styles.itemText}>Écrans</Text>
+        </TouchableOpacity>
+        <TouchableOpacity style={styles.item} onPress={openLinkProducts}>
+          <Image
+            source={require('../assets/image/products/mouse.png')}
+            style={styles.image}
+            resizeMode="contain"
+          />
+          <Text style={styles.itemText}>Equipement Informatique & Multimédia</Text>
+        </TouchableOpacity>
+        <TouchableOpacity style={styles.item} onPress={openLinkProducts}>
+          <Image
+            source={require('../assets/image/products/repaired.png')}
+            style={styles.image}
+            resizeMode="contain"
+          />
+          <Text style={styles.itemText}>Réparation</Text>
         </TouchableOpacity>
       </ScrollView>
       
@@ -46,28 +72,61 @@ export default function HomeScreen() {
       <ScrollView horizontal showsHorizontalScrollIndicator={false} contentContainerStyle={styles.scrollViewContainer}>
         <TouchableOpacity style={styles.item} onPress={openLinkEducations}>
           <Image
-            source={require('../assets/image/formation/blogger.png')}
+            source={require('../assets/image/formation/windows.png')}
             style={styles.image}
             resizeMode="contain"
           />
-          <Text style={styles.itemText}>Computer</Text>
+          <Text style={styles.itemText}>Environnement Windows</Text>
         </TouchableOpacity>
         <TouchableOpacity style={styles.item} onPress={openLinkEducations}>
           <Image
-            source={require('../assets/image/formation/erp.png')}
+            source={require('../assets/image/formation/linux-ubuntu.png')}
             style={styles.image}
             resizeMode="contain"
           />
-          <Text style={styles.itemText}>Desktop</Text>
+          <Text style={styles.itemText}>Environnement Ubuntu</Text>
         </TouchableOpacity>
         <TouchableOpacity style={styles.item} onPress={openLinkEducations}>
           <Image
-            source={require('../assets/image/formation/internet-security.png')}
+            source={require('../assets/image/formation/paper-plane.png')}
             style={styles.image}
             resizeMode="contain"
           />
-          <Text style={styles.itemText}>Gaming</Text>
+          <Text style={styles.itemText}>Messagerie</Text>
         </TouchableOpacity>
+        <TouchableOpacity style={styles.item} onPress={openLinkEducations}>
+          <Image
+            source={require('../assets/image/formation/padlock.png')}
+            style={styles.image}
+            resizeMode="contain"
+          />
+          <Text style={styles.itemText}>Internet & Sécurité Informatique</Text>
+        </TouchableOpacity>
+        <TouchableOpacity style={styles.item} onPress={openLinkEducations}>
+          <Image
+            source={require('../assets/image/formation/programming.png')}
+            style={styles.image}
+            resizeMode="contain"
+          />
+          <Text style={styles.itemText}>Logiciels & Applications</Text>
+        </TouchableOpacity>
+        <TouchableOpacity style={styles.item} onPress={openLinkEducations}>
+          <Image
+            source={require('../assets/image/formation/settings.png')}
+            style={styles.image}
+            resizeMode="contain"
+          />
+          <Text style={styles.itemText}>E-Administration</Text>
+        </TouchableOpacity>
+        <TouchableOpacity style={styles.item} onPress={openLinkEducations}>
+          <Image
+            source={require('../assets/image/formation/medical-team.png')}
+            style={styles.image}
+            resizeMode="contain"
+          />
+          <Text style={styles.itemText}>E-Sante</Text>
+        </TouchableOpacity>
+        
       </ScrollView>
 
     </View>
